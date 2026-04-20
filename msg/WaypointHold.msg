@@ -1,2 +1,0 @@
-Waypoint waypoint
-float32 time_to_hold
