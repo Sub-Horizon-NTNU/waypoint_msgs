@@ -8,11 +8,16 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS on)
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Waypoint.msg"
+  "msg/Waypoints.msg"
+  "msg/WaypointStatus.msg"
+  DEPENDENCIES std_msgs
+
 )
-ament_export_dependencies(rosidl_default_runtime)
+ament_export_dependencies(rosidl_default_runtime std_msgs)
 
 ament_package()
