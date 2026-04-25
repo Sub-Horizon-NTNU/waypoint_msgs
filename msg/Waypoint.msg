@@ -9,6 +9,7 @@ float64 y # [m]
 float64 heading # [-π,π] 
 
 float64 radius # Distance from waypoint to consider it a valid entry
+float64 velocity # Desired velocity
 bool keep_on_track # If waypoint heading should be facing the course
 
 #Only used for waypoint type HOLD:
